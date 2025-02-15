@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Програмування в інтернет</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to right, #6a11cb, #2575fc);
+            color: white;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        header {
+            text-align: center;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.3);
+        }
+        nav {
+            background: rgba(0, 0, 0, 0.5);
+            padding: 10px;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+        }
+        nav ul li {
+            margin: 0 15px;
+            position: relative;
+        }
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        nav ul li a:hover {
+            text-decoration: none;
+        }
+        .dropdown {
+            display: none;
+            position: absolute;
+            background: rgba(0, 0, 0, 0.5);
+            padding: 10px;
+            border-radius: 5px;
+        }
+        .dropdown a {
+            display: block;
+            color: white;
+            text-decoration: none;
+            padding: 5px 0;
+        }
+        main {
+            display: flex;
+            max-width: 1200px;
+            margin: 20px auto;
+            gap: 20px;
+            flex: 1;
+        }
+        article {
+            flex: 2;
+            background: rgba(255, 255, 255, 0.2);
+            padding: 20px;
+            border-radius: 10px;
+        }
+        aside {
+            flex: 1;
+            background: rgba(255, 255, 255, 0.2);
+            padding: 20px;
+            border-radius: 10px;
+        }
+        footer {
+            text-align: center;
+            padding: 10px;
+            background: rgba(0, 0, 0, 0.3);
+            margin-top: auto;
+        }
+    </style>
+    <script>
+        function toggleDropdown(id) {
+            var dropdown = document.getElementById(id);
+            dropdown.style.display = dropdown.style.display === "block" ? "none" : "block";
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Програмування в інтернет</h1>
+    </header>
+    
+    <nav>
+        <ul>
+            <li><a href="/">Головна</a></li>
+            <li>
+                <a onclick="toggleDropdown('lab-dropdown')">Лабораторні роботи</a>
+                <div id="lab-dropdown" class="dropdown">
+                    <a href="https://lab1-studentcard.netlify.app/">Лабораторна робота №1</a>
+                    <a href="https://lab2sabirov.netlify.app/">Лабораторна робота №2</a>
+                    <a href="#">Лабораторна робота №3</a>
+                </div>
+            </li>
+            <li>
+                <a onclick="toggleDropdown('practice-dropdown')">Практичні роботи</a>
+                <div id="practice-dropdown" class="dropdown">
+                    <a href="https://coruscating-cucurucho-2f0e1a.netlify.app/">Практична робота №1</a>
+                    <a href="https://pr2-dev-v21.netlify.app/">Практична робота №2</a>
+                </div>
+            </li>
+        </ul>
+    </nav>
+    
+    <main>
+        <article>
+            <section id="lab-works">
+                <h2>Лабораторні роботи</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent nec eros ut libero faucibus feugiat. Vestibulum cursus, ligula sed ultricies convallis, libero mauris pharetra ex, sit amet ullamcorper velit erat ac risus.</p>
+            </section>
+            <section id="practice-works">
+                <h2>Практичні роботи</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed varius arcu a diam commodo, at dictum nunc tincidunt. Integer feugiat, est eget lobortis ullamcorper, felis libero laoreet elit, vel scelerisque ex metus non odio.</p>
+            </section>
+        </article>
+        
+        <aside>
+            <h2>Інші курси</h2>
+            <ul>
+                <li><a href="https://www.coursera.org/courses?query=математика">Математика</a></li>
+                <li><a href="https://www.udemy.com/topic/physics/">Фізика</a></li>
+                <li><a href="https://www.edx.org/course/computer-science">Комп’ютерні науки</a></li>
+                <li><a href="https://www.khanacademy.org/science/biology">Біологія</a></li>
+                <li><a href="https://www.codecademy.com/learn/html-css">Веб-дизайн</a></li>
+            </ul>
+        </aside>
+    </main>
+    
+    <footer>
+        <p>&copy; Copyright 2025 by . All rights reversed.</p>
+    </footer>
+</body>
+</html>
